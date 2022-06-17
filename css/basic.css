@@ -56,3 +56,12 @@ footer{
 .btn.btn-warning{
     background-color:rgb(221, 190, 11);
 }
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}

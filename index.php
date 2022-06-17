@@ -1,3 +1,4 @@
+<?php include_once "./api/base.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +17,20 @@
         ?>
     </div>
     <div id="container">
-    dsfasfsd
-    </div>
-    <div>
-        <?php
-            include "./layout/footer.php";
-        ?>
-    </div>
+    <?php
+if(isset($_GET['do'])){
+    $file='./front/'.$_GET['do'].".php";
+}
+if(isset($file) && file_exists($file)){
+    include $file;
+}else{
+    include "./front/vote_list.php";
+}
+?>
+</div>
+</div>
+<div>
+    <?php include "./layout/footer.php";?>
+</div>    
 </body>
 </html>
